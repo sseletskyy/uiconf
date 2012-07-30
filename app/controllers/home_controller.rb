@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @load = Load.new
+    #@load = Load.new
   end
 end

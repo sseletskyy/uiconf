@@ -24,10 +24,10 @@
 ) jQuery
 
 $ ->
-  $("form input[id]").each (index,element) ->
-    div = $('<div class="conf_panel">R<input type="checkbox">W<input type="checkbox"></div>')
+  $("form input[id], select[id]").each (index,element) ->
+    div = $('<div class="conf_panel" target="'+ $(element).attr("id") + '">R<input type="checkbox">W<input type="checkbox"></div>')
     $("body").append(div)
-    div.attr("target", $(element).attr("id"))
+    #div.attr("target", $(element).attr("id"))
     offset = $(element).offset() # get position of the input
     offset.left += $(element).width();
     offset.top -= 30;
@@ -40,7 +40,6 @@ $ ->
           div.css("opacity", 0.2)
       ), 1000
     )
-
     div.mouseover(->
       div.css("opacity", 1)
     ).mouseout(->
@@ -52,6 +51,6 @@ $ ->
 
   $("div.conf_panel").hide() # hide by default
 
-  $('button#admin_mode').click(->
+  $('#admin_mode').click(->
     $("div.conf_panel").toggle()
   )

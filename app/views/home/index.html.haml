@@ -1,49 +1,49 @@
-= form_for @load, url: home_index_path  do |f|
+-#%form#form_id
   .container_12
     .grid_12{:style => "text-align:center; margin-bottom: 50px;"}
-      = "Example"
-      = button_tag "Admin mode", type: 'button', id: 'admin_mode'
+      %a#admin_mode
+        = "Click here to show/hide configuration mode"
     .clear
     .grid_4
       %span
-        = f.text_field :customer
-        = f.label :customer
+        %input#customer
+        %label Customer
       .clear
       %span
-        = f.text_field :location
-        = f.label :location
+        %input#location
+        %label Location
       .clear
       %span
-        = f.text_field :shipment_num
-        = f.label "Shipment #"
+        %input#shipment_num
+        %label "Shipment #"
       %br
 
     .grid_4
       %span
-        = f.text_field :weight
-        = f.label :weight
+        %input#weight
+        %label Weight
       .clear
       %span
-        = f.text_field :total_price
-        = f.label :total_price
+        %input#total_price
+        %label Total pieces
       .clear
       %span
-        = f.text_field :bill_to
-        = f.label :bill_to
+        %input#bill_to
+        %label Bill to
       .clear
 
     .grid_4
       %span
-        = f.text_field :equipment
-        = f.label :equipment
+        %input#equipment
+        %label Equipment
       .clear
       %span
-        = f.text_field :commodity
-        = f.label :commodity
+        %select#commodity
+        %label Commodity
       .clear
       %span
-        = f.check_box :booked, class: "checkbox"
-        = f.label :booked
+        %input#booked.checkbox{type: "checkbox"}
+        %label Booked
       .clear
     .clear
 
