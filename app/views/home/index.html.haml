@@ -1,0 +1,55 @@
+= form_for @load, url: home_index_path  do |f|
+  .container_12
+    .grid_12{:style => "text-align:center; margin-bottom: 50px;"}
+      = "Example"
+      = button_tag "Admin mode", type: 'button', id: 'admin_mode'
+    .clear
+    .grid_4
+      %span
+        = f.text_field :customer
+        = f.label :customer
+      .clear
+      %span
+        = f.text_field :location
+        = f.label :location
+      .clear
+      %span
+        = f.text_field :shipment_num
+        = f.label "Shipment #"
+      %br
+
+    .grid_4
+      %span
+        = f.text_field :weight
+        = f.label :weight
+      .clear
+      %span
+        = f.text_field :total_price
+        = f.label :total_price
+      .clear
+      %span
+        = f.text_field :bill_to
+        = f.label :bill_to
+      .clear
+
+    .grid_4
+      %span
+        = f.text_field :equipment
+        = f.label :equipment
+      .clear
+      %span
+        = f.text_field :commodity
+        = f.label :commodity
+      .clear
+      %span
+        = f.check_box :booked, class: "checkbox"
+        = f.label :booked
+      .clear
+    .clear
+
+
+-#.conf_panel
+  = "R"
+  %input{type: "checkbox"}
+  = "W"
+  %input{type: "checkbox"}

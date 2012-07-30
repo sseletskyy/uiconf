@@ -1,0 +1,29 @@
+!!! 5
+%html
+%head
+%meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-type"}
+%link{:rel => "shortcut icon", :href => "/favicon.ico"}
+%title= yield(:title)
+= yield :head
+= csrf_meta_tag
+= stylesheet_link_tag 'application'
+= javascript_include_tag "application"
+/ /[if lt IE 7]
+/   = stylesheet_link_tag 'ie'
+/ /[if IE 7]
+/   = stylesheet_link_tag 'ie7'
+%body
+-##page
+#header
+-##conteiner
+.over
+#sidebar_left
+-#= render :partial => 'layouts/sidebar_left'
+-#.flasher= render_flash_messages
+-##main
+= yield
+.lines
+
+#footer
+-#= render :partial => 'layouts/footer'
+-#= render :partial => 'layouts/update_facebox_links'
