@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
 gem 'rails', '3.2.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -42,4 +41,8 @@ gem 'jquery-rails'
 # Template engine
 gem "haml", '~> 3.1.6'
 gem 'sass', '~> 3.1.19'
-#gem 'therubyracer'
+gem 'heroku'
+
+group :production do
+  gem 'thin'
+end
