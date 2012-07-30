@@ -43,6 +43,11 @@ gem "haml", '~> 3.1.6'
 gem 'sass', '~> 3.1.19'
 gem 'heroku'
 
+group :development, :test do
+  gem 'sqlite3'
+end
+
 group :production do
   gem 'thin'
+  gem 'pg'
 end
